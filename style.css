@@ -1,0 +1,21 @@
+/* Universal Styling */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", sans-serif, serif;
+}
+
+/* Colours */
+
+:root {
+  --primaryGreen: #26c0abff;
+  --green900: #00494dff;
+  --green500: #5e7a7dff;
+  --green400: #7f9c9fff;
+  --green200: #c5e4e7ff;
+  --green50: #f4fafbff;
+  --white: #fff;
+  --formInputSize: 24px;
+}
