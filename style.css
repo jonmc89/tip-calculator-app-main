@@ -70,6 +70,7 @@ h1 {
   color: var(--green900);
   border-radius: 0.2em;
   width: 100%;
+  cursor: pointer;
 }
 
 .bill-input-container {
@@ -123,7 +124,7 @@ h1 {
   font-weight: bold;
   border-radius: 0.5em;
   font-size: var(--formInputSize);
-  max-width: 7.5em;
+  width: 100%;
 }
 
 .custom::placeholder {
@@ -206,4 +207,54 @@ h3 {
   font-size: 1.5em;
   font-weight: bold;
   border-radius: 0.5em;
+  cursor: pointer;
+}
+
+/* Tablet View */
+
+@media screen and (min-width: 51.25em) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-container {
+    width: 80%;
+    height: 80%;
+    padding: 3em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+  }
+
+  .btns-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .header {
+    margin: 5em 0;
+  }
+
+  .app-container {
+    width: 65%;
+    padding: 2em;
+  }
+  .content-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  .total-amount-container {
+    padding: 2em;
+  }
+
+  .reset-btn {
+    height: 3em;
+    align-self: center;
+  }
 }
