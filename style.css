@@ -38,19 +38,172 @@ fieldset {
 
 .app-container {
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   background-color: var(--white);
   padding: 1.5em;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
 }
 
 h1 {
-  color: var(--green900);
+  color: var(--green500);
   width: 3em;
   height: auto;
   font-size: 2em;
   word-wrap: break-word;
 }
 
-label {
+.label {
   color: var(--green500);
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.input-box,
+.people-input {
+  font-size: var(--formInputSize);
+  padding: 0.2em 1em;
+  text-align: end;
+  border: none;
+  background-color: var(--green50);
+  font-weight: bold;
+  color: var(--green900);
+  border-radius: 0.2em;
+  width: 100%;
+}
+
+.bill-input-container {
+  position: relative;
+  display: inline-block;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+.dollar-icon {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.bill-form {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.btns-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+  margin-bottom: 1em;
+  color: var(--green900);
+}
+
+.Btn {
+  padding: 0.5em 1.2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+}
+
+.percent {
+  background-color: var(--green900);
+  color: var(--white);
+}
+
+.custom {
+  color: var(--green500);
+  background-color: var(--green50);
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.5em;
+  font-size: var(--formInputSize);
+  max-width: 7.5em;
+}
+
+.custom::placeholder {
+  font-size: 1.2em;
+}
+
+.people-form {
+  display: grid;
+}
+
+.people-input-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.person-icon {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.total-container {
+  background-color: var(--green900);
+  padding: 1.5em;
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3;
+}
+
+h3 {
+  color: var(--white);
+  margin: 0.3em;
+}
+
+.tip-amount-container {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.total-amount-container,
+.tip-amount-container {
+  margin-bottom: 1em;
+}
+
+.tip-amount-container p,
+.total-amount-container p {
+  color: var(--green500);
+}
+
+.tip-amount-data,
+.total-amount-data {
+  color: var(--primaryGreen);
+  font-size: 2.5em;
+}
+
+.tip-amount-data {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.total-amount-container {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.total-amount-data {
+  grid-template-columns: 2;
+  grid-row: 2;
+}
+
+.reset-btn {
+  grid-column: 1/4;
+  grid-row: 3;
+  background-color: var(--primaryGreen);
+  border: none;
+  outline: none;
+  padding: 0.5em 1.2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 0.5em;
 }

@@ -27,24 +27,85 @@
       <section class="content-container">
         <section class="input-container">
           <form action="">
-            <fieldset>
-              <label for="bill-amount">Bill</label>
-              <input type="number" id="bill-amount" name="bill-amount" />
+            <fieldset class="bill-form">
+              <label class="label" for="bill-amount">Bill</label>
+              <div class="bill-input-container">
+                <img
+                  class="dollar-icon"
+                  src="./images/icon-dollar.svg"
+                  alt=""
+                />
+                <input
+                  class="input-box"
+                  type="number"
+                  id="bill-amount"
+                  name="bill-amount"
+                  placeholder="0"
+                />
+              </div>
             </fieldset>
             <fieldset>
-              <legend>Select Tip %</legend>
-              <button type="button" id="5%Btn" name="5%">5%</button>
-              <button type="button" id="10%Btn" name="10%">10%</button>
-              <button type="button" id="15%Btn" name="15%">15%</button>
-              <button type="button" id="25%Btn" name="25%">25%</button>
-              <button type="button" id="50%Btn" name="50%">50%</button>
-              <button type="button" id="customer%Btn" name="customer%">
-                Custom
-              </button>
+              <legend class="label">Select Tip %</legend>
+              <div class="btns-container">
+                <button class="percent Btn" type="button" id="5%Btn" name="5%">
+                  5%
+                </button>
+                <button
+                  class="percent Btn"
+                  type="button"
+                  id="10%Btn"
+                  name="10%"
+                >
+                  10%
+                </button>
+                <button
+                  class="percent Btn"
+                  type="button"
+                  id="15%Btn"
+                  name="15%"
+                >
+                  15%
+                </button>
+                <button
+                  class="percent Btn"
+                  type="button"
+                  id="25%Btn"
+                  name="25%"
+                >
+                  25%
+                </button>
+                <button
+                  class="percent Btn"
+                  type="button"
+                  id="50%Btn"
+                  name="50%"
+                >
+                  50%
+                </button>
+                <input
+                  class="custom"
+                  id="custom"
+                  type="number"
+                  placeholder="Custom"
+                />
+              </div>
             </fieldset>
-            <fieldset>
-              <label for="numberOfPeople">Number of People</label>
-              <input type="number" id="numberOfPeople" name="numberOfPeople" />
+            <fieldset class="people-form">
+              <label class="label" for="numberOfPeople">Number of People</label>
+              <div class="people-input-container">
+                <img
+                  class="person-icon"
+                  src="./images/icon-person.svg"
+                  alt=""
+                />
+                <input
+                  class="people-input"
+                  type="number"
+                  id="numberOfPeople"
+                  name="numberOfPeople"
+                  placeholder="0"
+                />
+              </div>
             </fieldset>
           </form>
         </section>
@@ -60,7 +121,7 @@
           </div>
           <p class="tip-amount-data">$<span id="tipAmountTotal"></span></p>
           <p class="total-amount-data">$<span id="totalAmountTotal"></span></p>
-          <button type="button" id="resetBtn">RESET</button>
+          <button class="reset-btn" type="button" id="resetBtn">RESET</button>
         </section>
       </section>
     </main>
