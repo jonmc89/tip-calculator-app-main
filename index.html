@@ -16,7 +16,6 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
@@ -40,45 +39,55 @@
                   type="number"
                   id="bill-amount"
                   name="bill-amount"
-                  placeholder="0"
+                  placeholder="0.00"
                 />
               </div>
             </fieldset>
             <fieldset>
               <legend class="label">Select Tip %</legend>
               <div class="btns-container">
-                <button class="percent Btn" type="button" id="5%Btn" name="5%">
+                <button
+                  class="percent btn"
+                  type="button"
+                  id="5%Btn"
+                  name="5%"
+                  data-tip="0.01"
+                >
                   5%
                 </button>
                 <button
-                  class="percent Btn"
+                  class="percent btn"
                   type="button"
                   id="10%Btn"
                   name="10%"
+                  data-value="0.1"
                 >
                   10%
                 </button>
                 <button
-                  class="percent Btn"
+                  class="percent btn"
                   type="button"
                   id="15%Btn"
                   name="15%"
+                  data-value="0.15"
                 >
                   15%
                 </button>
                 <button
-                  class="percent Btn"
+                  class="percent btn"
                   type="button"
                   id="25%Btn"
                   name="25%"
+                  data-value="0.25"
                 >
                   25%
                 </button>
                 <button
-                  class="percent Btn"
+                  class="percent btn"
                   type="button"
                   id="50%Btn"
                   name="50%"
+                  data-value="0.5"
                 >
                   50%
                 </button>
@@ -125,5 +134,6 @@
         </section>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

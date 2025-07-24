@@ -17,3 +17,8 @@
   / person
 
   Reset
+
+
+
+Links: 
+https://www.dhiwise.com/post/how-to-get-value-from-input-field-javascript-made-simple
