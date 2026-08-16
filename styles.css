@@ -1,0 +1,43 @@
+/* || Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colours */
+  --white: #fff;
+  --black: #000;
+  --green-900: #00474b;
+  --green-800: #085c61;
+  --green-750: #0d686d;
+  --green-400: #26c2ae;
+  --green-200: #9fe8df;
+  --grey-600: #3d6666;
+  --grey-550: #547878;
+  --grey-500: #5e7a7d;
+  --grey-400: #7f9d9f;
+  --grey-300: #9ebbbd;
+  --grey-200: #c5e4e7;
+  --greu-50: #f3f9fa;
+  --orange-400: #e17052;
+
+  /* Font Presets */
+  --pr-all-fw: 700 --pr-1-fs: 48px;
+  --pr-1-fs: 3rem;
+  --pr-1-lh: 4.4375rem;
+  --pr-1-ls: -0.0625rem;
+  --pr-2-fs: 2rem;
+  --pr-2-lh: 2.9375rem;
+  --pr-2-ls: -0.0419rem;
+  --pr-3-fs: 1.5rem;
+  --pr-3-lh: 2.25rem;
+  --pr-4-fs: 1.25rem;
+  --pr-4-lh: 1.875rem;
+  --pr-5-fs: 1rem;
+  --pr-5-lh: 1.5rem;
+  --pr-6-fs: 0.8125rem;
+  --pr-6-lh: 1.1875rem;
+}
