@@ -10,6 +10,32 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>SPLI<br />TTER</h1>
+    </header>
+    <main>
+      <div class="calculator-wrapper">
+        <form>
+          <label for="bill">Bill</label>
+          <input type="text" name="bill" id="bill" type="number" />
+          <div class="tip-btn-wrapper">
+            <label for="">Select Tip %</label>
+            <div class="button-wrapper">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+              <button>25%</button>
+              <button>50%</button>
+              <input class="custom" type="number" placeholder="Custom" />
+            </div>
+          </div>
+          <label for="people">Number of People</label>
+          <input type="text" name="people" id="people" type="number" />
+        </form>
+      </div>
+    </main>
+  </body>
 </html>

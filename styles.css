@@ -21,7 +21,7 @@
   --grey-400: #7f9d9f;
   --grey-300: #9ebbbd;
   --grey-200: #c5e4e7;
-  --greu-50: #f3f9fa;
+  --grey-50: #f3f9fa;
   --orange-400: #e17052;
 
   /* Font Presets */
@@ -40,4 +40,114 @@
   --pr-5-lh: 1.5rem;
   --pr-6-fs: 0.8125rem;
   --pr-6-lh: 1.1875rem;
+}
+
+/* Fonts */
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/space-mono-v17-latin-700.woff2') format('woff2');
+  font-family: 'Space Mono';
+  font-display: swap;
+}
+
+/* || Main Styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--grey-200);
+  font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin-block-end: 2rem;
+  padding-top: 3.125rem;
+
+  h1 {
+    color: var(--green-900);
+    letter-spacing: 0.5rem;
+  }
+}
+
+.calculator-wrapper {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  background-color: var(--white);
+  padding: 2rem 1.5rem;
+  width: 100vw;
+  height: auto;
+}
+
+.tip-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  color: var(--grey-500);
+}
+
+input {
+  border: none;
+  border-radius: 0.3125rem;
+  background-color: var(--grey-50);
+  padding: 0.5rem 1rem;
+  font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+}
+
+input:focus {
+  outline-color: var(--green-400);
+}
+
+input,
+button,
+.custom {
+  font-size: var(--pr-3-fs);
+  line-height: var(--pr-3-lh);
+  font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+}
+
+.button-wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+button,
+.custom {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3125rem;
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+}
+
+button {
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  background-color: var(--green-900);
+  color: var(--white);
+}
+
+button:focus,
+.custom:focus {
+  outline-color: var(--green-400);
+}
+
+button:hover {
+  background-color: var(--green-200);
+  color: var(--green-900);
 }
