@@ -104,6 +104,11 @@ input {
   padding: 0.5rem 1rem;
   font-family: 'Space Mono', Arial, Helvetica, sans-serif;
   text-align: right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
 }
 
 input:focus {
@@ -221,5 +226,21 @@ button:hover {
     gap: 2rem;
     padding: 1.5rem 2rem;
     height: 18.75rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .calculator-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 2rem;
+    width: 57.5rem;
+    height: 30.0625rem;
+  }
+
+  .tip-btn-wrapper,
+  .totals-container {
+    height: 100%;
   }
 }
