@@ -1,8 +1,15 @@
-// Bill Input
-
+// Variables
 const billInput = document.getElementById('bill');
-
 let billValue = 0;
+const tipBtns = document.querySelectorAll('.tipBtn');
+let tipValue = 0;
+const customInput = document.getElementById('customInput');
+const peopleInput = document.getElementById('peopleInput');
+let peopleValue = 0;
+const totalTipEl = document.getElementById('totalTip');
+const totalBillEl = document.getElementById('totalBill');
+
+// Bill Input
 
 billInput.addEventListener('input', () => {
   let billAmount = parseFloat(billInput.value);
@@ -11,25 +18,21 @@ billInput.addEventListener('input', () => {
     billValue = 0;
   } else {
     billValue = billAmount;
+    getTipAmount(billValue, tipValue, peopleValue);
   }
 });
 
 // Tip Buttons
 
-const tipBtns = document.querySelectorAll('.tipBtn');
-
-let tipValue = 0;
-
 tipBtns.forEach((button) => {
   button.addEventListener('click', () => {
     tipValue = parseFloat(button.value);
+    getTipAmount(billValue, tipValue, peopleValue);
     console.log(tipValue);
   });
 });
 
 // Custom Tip Amount
-
-const customInput = document.getElementById('customInput');
 
 customInput.addEventListener('input', () => {
   let customTipAmount = parseFloat(customInput.value);
@@ -40,13 +43,10 @@ customInput.addEventListener('input', () => {
     tipValue = customTipAmount;
     console.log(tipValue);
   }
+  getTipAmount(billValue, tipValue, peopleValue);
 });
 
 // People Amount
-
-const peopleInput = document.getElementById('peopleInput');
-
-let peopleValue = 0;
 
 peopleInput.addEventListener('input', () => {
   let peopleAmount = parseFloat(peopleInput.value);
@@ -58,7 +58,25 @@ peopleInput.addEventListener('input', () => {
     console.log('Needs to be a whole number');
   } else {
     peopleValue = peopleAmount;
-    console.log(peopleAmount);
-    console.log(Number.isInteger(peopleValue));
+    getTipAmount(billValue, tipValue, peopleValue);
   }
 });
+
+function getTipAmount(billValue, tipValue, peopleValue) {
+  if (peopleValue <= 0) {
+    totalBillEl.textContent = '';
+    totalTipEl.textContent = '';
+    return;
+  }
+  let tipPercentage = tipValue / 100;
+  console.log(tipPercentage);
+  let finalTipValue = billValue * tipPercentage;
+
+  let totalTipValue = finalTipValue / peopleValue;
+  let totalBillValue = (billValue + finalTipValue) / peopleValue;
+  console.log(totalTipValue);
+  console.log(totalBillValue);
+
+  totalBillEl.textContent = totalBillValue;
+  totalTipEl.textContent = totalTipValue;
+}
