@@ -97,6 +97,17 @@ label {
   color: var(--grey-500);
 }
 
+.bill-input-container {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+}
+
 input {
   border: none;
   border-radius: 0.3125rem;
@@ -158,6 +169,16 @@ button:hover {
   color: var(--green-900);
 }
 
+.people-input-container {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+  }
+}
+
 .people-input {
   margin-block-end: 2rem;
 }
@@ -176,7 +197,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 
-  span {
+  .currency {
     color: var(--green-400);
     font-size: clamp(var(--pr-2-fs), 5vw, var(--pr-1-fs));
     line-height: var(--pr-2-lh);
@@ -237,6 +258,10 @@ button:hover {
     padding: 2rem;
     width: 57.5rem;
     height: 30.0625rem;
+  }
+
+  input {
+    width: 100%;
   }
 
   .tip-btn-wrapper,

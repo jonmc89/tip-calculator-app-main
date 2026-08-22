@@ -21,7 +21,10 @@
       <div class="calculator-wrapper">
         <form>
           <label for="bill">Bill</label>
-          <input type="text" name="bill" id="bill" inputmode="numeric" />
+          <div class="bill-input-container">
+            <img src="./images/icon-dollar.svg" alt="" />
+            <input type="text" name="bill" id="bill" inputmode="numeric" />
+          </div>
           <div class="tip-btn-wrapper">
             <label for="">Select Tip %</label>
             <div class="button-wrapper">
@@ -40,13 +43,16 @@
             </div>
           </div>
           <label for="people">Number of People</label>
-          <input
-            class="people-input"
-            type="text"
-            name="people"
-            id="peopleInput"
-            type="number"
-          />
+          <div class="people-input-container">
+            <img src="./images/icon-person.svg" alt="" />
+            <input
+              class="people-input"
+              type="text"
+              name="people"
+              id="peopleInput"
+              type="number"
+            />
+          </div>
         </form>
         <div class="totals-container">
           <div class="amount-wrapper">
@@ -54,14 +60,14 @@
               <h2>Tip Amount</h2>
               <p>/ person</p>
             </div>
-            <span id="totalTip"></span>
+            <p class="currency">£<span id="totalTip"></span></p>
           </div>
           <div class="amount-wrapper">
             <div class="amount-text-wrapper">
               <h2>Total</h2>
               <p>/ person</p>
             </div>
-            <span id="totalBill"></span>
+            <p class="currency">£<span id="totalBill"></span></p>
           </div>
           <button class="reset-btn">RESET</button>
         </div>

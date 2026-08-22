@@ -77,6 +77,6 @@ function getTipAmount(billValue, tipValue, peopleValue) {
   console.log(totalTipValue);
   console.log(totalBillValue);
 
-  totalBillEl.textContent = totalBillValue;
-  totalTipEl.textContent = totalTipValue;
+  totalBillEl.textContent = totalBillValue.toFixed(2);
+  totalTipEl.textContent = totalTipValue.toFixed(2);
 }
