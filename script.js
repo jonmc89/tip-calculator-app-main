@@ -8,6 +8,7 @@ const peopleInput = document.getElementById('peopleInput');
 let peopleValue = 0;
 const totalTipEl = document.getElementById('totalTip');
 const totalBillEl = document.getElementById('totalBill');
+const resetBtn = document.getElementById('resetBtn');
 
 // Bill Input
 
@@ -80,3 +81,13 @@ function getTipAmount(billValue, tipValue, peopleValue) {
   totalBillEl.textContent = totalBillValue.toFixed(2);
   totalTipEl.textContent = totalTipValue.toFixed(2);
 }
+
+// Reset Form
+
+resetBtn.addEventListener('click', () => {
+  billInput.value = '';
+  customInput.value = '';
+  peopleInput.value = '';
+  totalBillEl.textContent = '';
+  totalTipEl.textContent = '';
+});
