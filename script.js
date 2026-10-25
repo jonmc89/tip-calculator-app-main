@@ -19,8 +19,9 @@ billInput.addEventListener('input', () => {
     billValue = 0;
   } else {
     billValue = billAmount;
-    getTipAmount(billValue, tipValue, peopleValue);
   }
+
+  getTipAmount();
 });
 
 // Tip Buttons
@@ -29,7 +30,6 @@ tipBtns.forEach((button) => {
   button.addEventListener('click', () => {
     tipValue = parseFloat(button.value);
     getTipAmount(billValue, tipValue, peopleValue);
-    console.log(tipValue);
   });
 });
 
@@ -39,10 +39,8 @@ customInput.addEventListener('input', () => {
   let customTipAmount = parseFloat(customInput.value);
   if (isNaN(customTipAmount)) {
     tipValue = 0;
-    console.log(tipValue);
   } else {
     tipValue = customTipAmount;
-    console.log(tipValue);
   }
   getTipAmount(billValue, tipValue, peopleValue);
 });
@@ -51,16 +49,14 @@ customInput.addEventListener('input', () => {
 
 peopleInput.addEventListener('input', () => {
   let peopleAmount = parseFloat(peopleInput.value);
-  if (
-    peopleAmount <= 0 ||
-    isNaN(peopleAmount) ||
-    !Number.isInteger(peopleAmount)
-  ) {
-    console.log('Needs to be a whole number');
+
+  if (peopleAmount <= 0 || isNaN(peopleAmount)) {
+    peopleValue = 0;
   } else {
     peopleValue = peopleAmount;
-    getTipAmount(billValue, tipValue, peopleValue);
   }
+
+  getTipAmount();
 });
 
 function getTipAmount(billValue, tipValue, peopleValue) {
@@ -70,13 +66,10 @@ function getTipAmount(billValue, tipValue, peopleValue) {
     return;
   }
   let tipPercentage = tipValue / 100;
-  console.log(tipPercentage);
   let finalTipValue = billValue * tipPercentage;
 
   let totalTipValue = finalTipValue / peopleValue;
   let totalBillValue = (billValue + finalTipValue) / peopleValue;
-  console.log(totalTipValue);
-  console.log(totalBillValue);
 
   totalBillEl.textContent = totalBillValue.toFixed(2);
   totalTipEl.textContent = totalTipValue.toFixed(2);
@@ -90,4 +83,8 @@ resetBtn.addEventListener('click', () => {
   peopleInput.value = '';
   totalBillEl.textContent = '';
   totalTipEl.textContent = '';
+
+  billValue = 0;
+  tipValue = 0;
+  peopleValue = 0;
 });

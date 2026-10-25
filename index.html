@@ -39,16 +39,16 @@
                 type="text"
                 inputmode="numeric"
                 placeholder="Custom"
+                aria-label="customInput"
               />
             </div>
           </div>
-          <label for="people">Number of People</label>
+          <label for="people-input">Number of People</label>
           <div class="people-input-container">
             <img src="./images/icon-person.svg" alt="" />
             <input
               class="people-input"
-              type="text"
-              name="people"
+              name="people-input"
               id="peopleInput"
               type="number"
             />
@@ -60,7 +60,9 @@
               <h2>Tip Amount</h2>
               <p>/ person</p>
             </div>
-            <p class="currency">£<span id="totalTip"></span></p>
+            <p class="currency">
+              £<span aria-live="polite" id="totalTip"></span>
+            </p>
           </div>
           <div class="amount-wrapper">
             <div class="amount-text-wrapper">
